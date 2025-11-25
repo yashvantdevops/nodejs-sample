@@ -20,7 +20,7 @@ metadata:
   namespace: todoapp
 data:
   NODE_ENV: "production"
-  ALLOWED_ORIGINS: "https://direct.labs.play-with-docker.com"
+  ALLOWED_ORIGINS: "http://192.168.0.29:5432"
   POSTGRES_HOST: "todoapp-postgres"
   POSTGRES_PORT: "5432"
   POSTGRES_DB: "todoapp"
@@ -282,7 +282,7 @@ spec:
         - yourdomain.com
       secretName: todoapp-tls
   rules:
-    - host: yourdomain.com
+    - host: http://192.168.0.29
       http:
         paths:
           - path: /
