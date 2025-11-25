@@ -20,7 +20,7 @@ metadata:
   namespace: todoapp
 data:
   NODE_ENV: "production"
-  ALLOWED_ORIGINS: "https://yourdomain.com"
+  ALLOWED_ORIGINS: "https://direct.labs.play-with-docker.com"
   POSTGRES_HOST: "todoapp-postgres"
   POSTGRES_PORT: "5432"
   POSTGRES_DB: "todoapp"
@@ -175,7 +175,7 @@ spec:
         fsGroup: 1001
       containers:
         - name: todoapp
-          image: ghcr.io/your-username/docker-nodejs-sample:latest
+          image: docker.io/yashvantdevops/nodejs-sample:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
